@@ -1,0 +1,1668 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>DashboardAdmin</class>
+ <widget class="QWidget" name="DashboardAdmin">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>698</width>
+    <height>600</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dashboard Admin Penginapan</string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout">
+   <item>
+    <widget class="QFrame" name="frameHeader">
+     <property name="styleSheet">
+      <string notr="true">QFrame { background-color: rgb(174,167,126); border-radius: 10px; padding: 10px; }
+QLabel { font-size: 18pt; font-weight: bold; color: rgb(80,60,40); }</string>
+     </property>
+     <layout class="QHBoxLayout" name="horizontalLayout">
+      <item alignment="Qt::AlignHCenter">
+       <widget class="QLabel" name="lblTitle">
+        <property name="text">
+         <string>🏨 Dashboard Admin Penginapan 🏨</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+   <item>
+    <widget class="QTabWidget" name="tabAdmin">
+     <property name="styleSheet">
+      <string notr="true">QTabBar::tab { background-color: rgb(255,244,185); padding: 8px 20px; border-radius: 6px; margin-right: 5px; }
+QTabBar::tab:selected { background-color: rgb(200,180,120); }
+QHeaderView::section { background-color: rgb(231,228,176); padding: 4px; border: 1px solid rgb(184,182,139); font-weight: bold; }
+QPushButton { padding: 8px 15px; border-radius: 6px; font-weight: bold; color: white; }</string>
+     </property>
+     <property name="currentIndex">
+      <number>4</number>
+     </property>
+     <widget class="QWidget" name="tabRooms">
+      <attribute name="title">
+       <string>Manajemen Kamar</string>
+      </attribute>
+      <layout class="QGridLayout" name="gridLayout_2">
+       <item row="0" column="0">
+        <widget class="QLabel" name="lblRoomManagement">
+         <property name="styleSheet">
+          <string notr="true">font-size: 14pt; font-weight: bold; padding: 5px;</string>
+         </property>
+         <property name="text">
+          <string>📋 Manajemen Kamar (CRUD)</string>
+         </property>
+        </widget>
+       </item>
+       <item row="1" column="0">
+        <widget class="QScrollArea" name="scrollAreaRooms">
+         <property name="widgetResizable">
+          <bool>true</bool>
+         </property>
+         <widget class="QWidget" name="scrollAreaWidgetContents_6">
+          <property name="geometry">
+           <rect>
+            <x>0</x>
+            <y>-1691</y>
+            <width>653</width>
+            <height>2216</height>
+           </rect>
+          </property>
+          <layout class="QGridLayout" name="gridLayout">
+           <item row="3" column="1">
+            <widget class="QFrame" name="roomFrame2_58">
+             <property name="styleSheet">
+              <string notr="true">
+                QFrame { background-color: rgb(231,228,176); border: 2px solid rgb(184,182,139); border-radius: 6px; padding: 8px; }
+                QLabel#roomTitle2 { font-weight: bold; font-size: 12pt; }
+                QLabel#roomDesc2 { font-size: 9pt; }
+              </string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_59">
+              <item>
+               <layout class="QVBoxLayout" name="roomTextCol2_58"/>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit_60">
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Deluxe&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Room&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fasilitas Utama: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;22 m² / 237 ft², kasur queen/king, AC, WiFi, area duduk, termasuk sarapan 2 tamu&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnPrice2_58">
+                <property name="styleSheet">
+                 <string notr="true"> color: rgb(0, 0, 0); background-color: rgb(174,167,126)
+ </string>
+                </property>
+                <property name="text">
+                 <string>Rp.550.000</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="4" column="1">
+            <widget class="QFrame" name="roomFrame2_52">
+             <property name="styleSheet">
+              <string notr="true">
+                QFrame { background-color: rgb(231,228,176); border: 2px solid rgb(184,182,139); border-radius: 6px; padding: 8px; }
+                QLabel#roomTitle2 { font-weight: bold; font-size: 12pt; }
+                QLabel#roomDesc2 { font-size: 9pt; }
+              </string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_53">
+              <item>
+               <layout class="QVBoxLayout" name="roomTextCol2_52"/>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit_54">
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Twin&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Room&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fasilitas Utama: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;20 m² / 215 ft², 2 kasur single, AC, WiFi, meja kecil&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnPrice2_52">
+                <property name="styleSheet">
+                 <string notr="true"> color: rgb(0, 0, 0); background-color: rgb(174,167,126)
+ </string>
+                </property>
+                <property name="text">
+                 <string>Rp.450.000</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QFrame" name="roomFrame2_54">
+             <property name="styleSheet">
+              <string notr="true">
+                QFrame { background-color: rgb(231,228,176); border: 2px solid rgb(184,182,139); border-radius: 6px; padding: 8px; }
+                QLabel#roomTitle2 { font-weight: bold; font-size: 12pt; }
+                QLabel#roomDesc2 { font-size: 9pt; }
+              </string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_55">
+              <item>
+               <layout class="QVBoxLayout" name="roomTextCol2_54"/>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit_56">
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Superior&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Room&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fasilitas Utama: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;18 m² / 194 ft², 1 kasur queen, AC, WiFi, pemandangan kota, termasuk sarapan 2 tamu&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnPrice2_54">
+                <property name="styleSheet">
+                 <string notr="true"> color: rgb(0, 0, 0); background-color: rgb(174,167,126)
+ </string>
+                </property>
+                <property name="text">
+                 <string>Rp.400.000</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="5" column="1">
+            <widget class="QFrame" name="roomFrame2_51">
+             <property name="styleSheet">
+              <string notr="true">
+                QFrame { background-color: rgb(231,228,176); border: 2px solid rgb(184,182,139); border-radius: 6px; padding: 8px; }
+                QLabel#roomTitle2 { font-weight: bold; font-size: 12pt; }
+                QLabel#roomDesc2 { font-size: 9pt; }
+              </string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_52">
+              <item>
+               <layout class="QVBoxLayout" name="roomTextCol2_51"/>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit_53">
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Twin&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Room&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fasilitas Utama: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;20 m² / 215 ft², 2 kasur single, AC, WiFi, meja kecil, termasuk sarapan 2 tamu&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnPrice2_51">
+                <property name="styleSheet">
+                 <string notr="true"> color: rgb(0, 0, 0); background-color: rgb(174,167,126)
+ </string>
+                </property>
+                <property name="text">
+                 <string>Rp.500.000</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="6" column="1">
+            <widget class="QFrame" name="roomFrame2_59">
+             <property name="styleSheet">
+              <string notr="true">
+                QFrame { background-color: rgb(231,228,176); border: 2px solid rgb(184,182,139); border-radius: 6px; padding: 8px; }
+                QLabel#roomTitle2 { font-weight: bold; font-size: 12pt; }
+                QLabel#roomDesc2 { font-size: 9pt; }
+              </string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_60">
+              <item>
+               <layout class="QVBoxLayout" name="roomTextCol2_59"/>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit_61">
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Family&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Room&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fasilitas Utama: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;28 m² / 301 ft², kasur king + single, TV, AC, WiFi, sofa kecil, kamar mandi luas&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnPrice2_59">
+                <property name="styleSheet">
+                 <string notr="true"> color: rgb(0, 0, 0); background-color: rgb(174,167,126)
+ </string>
+                </property>
+                <property name="text">
+                 <string>Rp.700.000</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QFrame" name="roomFrame2_55">
+             <property name="styleSheet">
+              <string notr="true">
+                QFrame { background-color: rgb(231,228,176); border: 2px solid rgb(184,182,139); border-radius: 6px; padding: 8px; }
+                QLabel#roomTitle2 { font-weight: bold; font-size: 12pt; }
+                QLabel#roomDesc2 { font-size: 9pt; }
+              </string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_56">
+              <item>
+               <layout class="QVBoxLayout" name="roomTextCol2_55"/>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit_57">
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Superior&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Room&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fasilitas Utama: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;18 m² / 194 ft², 1 kasur queen, AC, WIFI, pemandangan kota&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnPrice2_55">
+                <property name="styleSheet">
+                 <string notr="true"> color: rgb(0, 0, 0); background-color: rgb(174,167,126)
+ </string>
+                </property>
+                <property name="text">
+                 <string>Rp.350.000</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="7" column="1">
+            <widget class="QFrame" name="roomFrame2_49">
+             <property name="styleSheet">
+              <string notr="true">
+                QFrame { background-color: rgb(231,228,176); border: 2px solid rgb(184,182,139); border-radius: 6px; padding: 8px; }
+                QLabel#roomTitle2 { font-weight: bold; font-size: 12pt; }
+                QLabel#roomDesc2 { font-size: 9pt; }
+              </string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_50">
+              <item>
+               <layout class="QVBoxLayout" name="roomTextCol2_49"/>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit_51">
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Family&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Room&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fasilitas Utama: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;28 m² / 301 ft², kasur king + single, TV, AC, WiFi, sofa kecil, kamar mandi luas, termasuk sarapan 3 tamu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnPrice2_49">
+                <property name="styleSheet">
+                 <string notr="true"> color: rgb(0, 0, 0); background-color: rgb(174,167,126)
+ </string>
+                </property>
+                <property name="text">
+                 <string>Rp.750.000</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QFrame" name="roomFrame2_60">
+             <property name="styleSheet">
+              <string notr="true">
+                QFrame { background-color: rgb(231,228,176); border: 2px solid rgb(184,182,139); border-radius: 6px; padding: 8px; }
+                QLabel#roomTitle2 { font-weight: bold; font-size: 12pt; }
+                QLabel#roomDesc2 { font-size: 9pt; }
+              </string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_61">
+              <item>
+               <layout class="QVBoxLayout" name="roomTextCol2_60"/>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit_62">
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Deluxe&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Room&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fasilitas Utama: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;22 m² / 237 ft², kasur queen/king, AC, WiFi, area duduk&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnPrice2_60">
+                <property name="styleSheet">
+                 <string notr="true"> color: rgb(0, 0, 0); background-color: rgb(174,167,126)
+ </string>
+                </property>
+                <property name="text">
+                 <string>Rp.500.000</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="11" column="1">
+            <widget class="QFrame" name="roomFrame2_53">
+             <property name="styleSheet">
+              <string notr="true">
+                QFrame { background-color: rgb(231,228,176); border: 2px solid rgb(184,182,139); border-radius: 6px; padding: 8px; }
+                QLabel#roomTitle2 { font-weight: bold; font-size: 12pt; }
+                QLabel#roomDesc2 { font-size: 9pt; }
+              </string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_54">
+              <item>
+               <layout class="QVBoxLayout" name="roomTextCol2_53"/>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit_55">
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Presidential&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Room&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fasilitas Utama: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;50 m² / 538 ft², kasur king premium, ruang tamu, ruang makan, mini bar lengkap, WiFi cepat, kamar mandi bathtub, termasuk sarapan 2 tamu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnPrice2_53">
+                <property name="styleSheet">
+                 <string notr="true"> color: rgb(0, 0, 0); background-color: rgb(174,167,126)
+ </string>
+                </property>
+                <property name="text">
+                 <string>Rp.2.950.000</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="8" column="1">
+            <widget class="QFrame" name="roomFrame2_57">
+             <property name="styleSheet">
+              <string notr="true">
+                QFrame { background-color: rgb(231,228,176); border: 2px solid rgb(184,182,139); border-radius: 6px; padding: 8px; }
+                QLabel#roomTitle2 { font-weight: bold; font-size: 12pt; }
+                QLabel#roomDesc2 { font-size: 9pt; }
+              </string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_58">
+              <item>
+               <layout class="QVBoxLayout" name="roomTextCol2_57"/>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit_59">
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Executive&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Room&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fasilitas Utama: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;26 m² / 280 ft², kasur king, meja kerja, WiFi, kamar mandi luas&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnPrice2_57">
+                <property name="styleSheet">
+                 <string notr="true"> color: rgb(0, 0, 0); background-color: rgb(174,167,126)
+ </string>
+                </property>
+                <property name="text">
+                 <string>Rp.600.000</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="10" column="1">
+            <widget class="QFrame" name="roomFrame2_50">
+             <property name="styleSheet">
+              <string notr="true">
+                QFrame { background-color: rgb(231,228,176); border: 2px solid rgb(184,182,139); border-radius: 6px; padding: 8px; }
+                QLabel#roomTitle2 { font-weight: bold; font-size: 12pt; }
+                QLabel#roomDesc2 { font-size: 9pt; }
+              </string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_51">
+              <item>
+               <layout class="QVBoxLayout" name="roomTextCol2_50"/>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit_52">
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Presidential&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Room&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fasilitas Utama: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;50 m² / 538 ft², kasur king premium, ruang tamu, ruang makan, mini bar lengkap, WiFi cepat, kamar mandi bathtub&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnPrice2_50">
+                <property name="styleSheet">
+                 <string notr="true"> color: rgb(0, 0, 0); background-color: rgb(174,167,126)
+ </string>
+                </property>
+                <property name="text">
+                 <string>Rp.2.800.000</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="9" column="1">
+            <widget class="QFrame" name="roomFrame2_56">
+             <property name="styleSheet">
+              <string notr="true">
+                QFrame { background-color: rgb(231,228,176); border: 2px solid rgb(184,182,139); border-radius: 6px; padding: 8px; }
+                QLabel#roomTitle2 { font-weight: bold; font-size: 12pt; }
+                QLabel#roomDesc2 { font-size: 9pt; }
+              </string>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_57">
+              <item>
+               <layout class="QVBoxLayout" name="roomTextCol2_56"/>
+              </item>
+              <item>
+               <widget class="QTextEdit" name="textEdit_58">
+                <property name="html">
+                 <string>&lt;!DOCTYPE HTML PUBLIC &quot;-//W3C//DTD HTML 4.0//EN&quot; &quot;http://www.w3.org/TR/REC-html40/strict.dtd&quot;&gt;
+&lt;html&gt;&lt;head&gt;&lt;meta name=&quot;qrichtext&quot; content=&quot;1&quot; /&gt;&lt;style type=&quot;text/css&quot;&gt;
+p, li { white-space: pre-wrap; }
+&lt;/style&gt;&lt;/head&gt;&lt;body style=&quot; font-family:'MS Shell Dlg 2'; font-size:8pt; font-weight:400; font-style:normal;&quot;&gt;
+&lt;p align=&quot;center&quot; style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Executive&lt;/span&gt;&lt;span style=&quot; font-size:12pt;&quot;&gt; &lt;/span&gt;&lt;span style=&quot; font-size:12pt; font-weight:600;&quot;&gt;Room&lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot;-qt-paragraph-type:empty; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;br /&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;&lt;span style=&quot; font-weight:600;&quot;&gt;Fasilitas Utama: &lt;/span&gt;&lt;/p&gt;
+&lt;p style=&quot; margin-top:0px; margin-bottom:0px; margin-left:0px; margin-right:0px; -qt-block-indent:0; text-indent:0px;&quot;&gt;26 m² / 280 ft², kasur king, meja kerja, WiFi, kamar mandi luas, temasuk sarapan 2 tamu&lt;/p&gt;&lt;/body&gt;&lt;/html&gt;</string>
+                </property>
+               </widget>
+              </item>
+              <item>
+               <widget class="QPushButton" name="btnPrice2_56">
+                <property name="styleSheet">
+                 <string notr="true"> color: rgb(0, 0, 0); background-color: rgb(174,167,126)
+ </string>
+                </property>
+                <property name="text">
+                 <string>Rp.650.000</string>
+                </property>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </item>
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_49">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url(:/img/img/Superior room.jpg);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="0">
+            <widget class="QLabel" name="label_50">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url(:/img/img/Deluxe room.jpg);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="0">
+            <widget class="QLabel" name="label_59">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url(:/img/img/Superior room.jpg);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
+            <widget class="QLabel" name="label_51">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url(:/img/img/Deluxe room.jpg);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="4" column="0">
+            <widget class="QLabel" name="label_52">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url(:/img/img/Twin room.jpg);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="5" column="0">
+            <widget class="QLabel" name="label_53">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url(:/img/img/Twin room.jpg);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="6" column="0">
+            <widget class="QLabel" name="label_54">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url(:/img/img/Family room.jpg);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="9" column="0">
+            <widget class="QLabel" name="label_56">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url(:/img/img/Executive room.jpg);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="7" column="0">
+            <widget class="QLabel" name="label_55">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url(:/img/img/Family room.jpg);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="8" column="0">
+            <widget class="QLabel" name="label_60">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url(:/img/img/Executive room.jpg);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="11" column="0">
+            <widget class="QLabel" name="label_58">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url(:/img/img/Presidential room.jpg);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+           <item row="10" column="0">
+            <widget class="QLabel" name="label_57">
+             <property name="minimumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>250</width>
+               <height>180</height>
+              </size>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">image: url(:/img/img/Presidential room.jpg);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="scaledContents">
+              <bool>true</bool>
+             </property>
+            </widget>
+           </item>
+          </layout>
+         </widget>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <layout class="QHBoxLayout" name="layoutRoomButtons">
+         <item>
+          <widget class="QPushButton" name="btnAddRoom">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(80,160,80);</string>
+           </property>
+           <property name="text">
+            <string>➕ Tambah Kamar</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnEditRoom">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(100,100,180);</string>
+           </property>
+           <property name="text">
+            <string>✏️ Edit Kamar</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnDeleteRoom">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(190,60,60);</string>
+           </property>
+           <property name="text">
+            <string>🗑️ Hapus Kamar</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnViewRoomRatings">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(220,180,50);</string>
+           </property>
+           <property name="text">
+            <string>⭐ Lihat Rating</string>
+           </property>
+          </widget>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabPayments">
+      <attribute name="title">
+       <string>Validasi Pembayaran</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="layoutPayments">
+       <item>
+        <widget class="QLabel" name="lblPaymentTitle">
+         <property name="styleSheet">
+          <string notr="true">font-size: 14pt; font-weight: bold; padding: 5px;</string>
+         </property>
+         <property name="text">
+          <string>💳 Validasi Pembayaran</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tablePayments">
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <column>
+          <property name="text">
+           <string>ID Bayar</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>ID Booking</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>User</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Total Bayar</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Tgl. Bayar</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Metode</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Status</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Bukti Transfer</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="layoutButtonsPayments">
+         <item>
+          <widget class="QPushButton" name="btnRefreshPayments">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(100,100,180);</string>
+           </property>
+           <property name="text">
+            <string>🔄 Refresh Data</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnViewPaymentProof">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(80,160,80);</string>
+           </property>
+           <property name="text">
+            <string>🖼️ Lihat Bukti Transfer</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnValidatePayment">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(50,180,50);</string>
+           </property>
+           <property name="text">
+            <string>✅ Konfirmasi Pembayaran</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacerPayments">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabBookings">
+      <attribute name="title">
+       <string>Data Pemesanan</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="layoutBookings">
+       <item>
+        <widget class="QLabel" name="lblBookingTitle">
+         <property name="styleSheet">
+          <string notr="true">font-size: 14pt; font-weight: bold; padding: 5px;</string>
+         </property>
+         <property name="text">
+          <string>📅 Data Pemesanan</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableBookings">
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <column>
+          <property name="text">
+           <string>ID Booking</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Tgl. Booking</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>User</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Tipe Kamar</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Check-in</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Check-out</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Total Harga</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Status Pesanan</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Status Bayar</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="layoutBookingButtons">
+         <item>
+          <widget class="QPushButton" name="btnRefreshBookings">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(100,100,180);</string>
+           </property>
+           <property name="text">
+            <string>🔄 Refresh Data</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacerBooking">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabReports">
+      <attribute name="title">
+       <string>Laporan</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="layoutReports">
+       <item>
+        <widget class="QLabel" name="lblReportTitle">
+         <property name="styleSheet">
+          <string notr="true">font-size: 14pt; font-weight: bold; padding: 5px;</string>
+         </property>
+         <property name="text">
+          <string>📊 Laporan Pemesanan</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="layoutReportFilter">
+         <item>
+          <widget class="QLabel" name="lblFilterPeriod">
+           <property name="text">
+            <string>Filter Periode:</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="dateStartReport">
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QLabel" name="lblTo">
+           <property name="text">
+            <string>s/d</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QDateEdit" name="dateEndReport">
+           <property name="calendarPopup">
+            <bool>true</bool>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnGenerateReport">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(80,160,80);</string>
+           </property>
+           <property name="text">
+            <string>📈 Generate Laporan</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacerReport">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+       <item>
+        <widget class="QGroupBox" name="groupBoxSummary">
+         <property name="title">
+          <string>Ringkasan</string>
+         </property>
+         <layout class="QGridLayout" name="gridLayoutSummary">
+          <item row="0" column="0">
+           <widget class="QLabel" name="lblTotalBookings">
+            <property name="text">
+             <string>Total Pemesanan:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="0" column="1">
+           <widget class="QLabel" name="lblTotalBookingsValue">
+            <property name="styleSheet">
+             <string notr="true">font-weight: bold;</string>
+            </property>
+            <property name="text">
+             <string>0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="0">
+           <widget class="QLabel" name="lblTotalRevenue">
+            <property name="text">
+             <string>Total Pendapatan:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="1" column="1">
+           <widget class="QLabel" name="lblTotalRevenueValue">
+            <property name="styleSheet">
+             <string notr="true">font-weight: bold; color: green;</string>
+            </property>
+            <property name="text">
+             <string>Rp 0</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="0">
+           <widget class="QLabel" name="lblMostBookedRoom">
+            <property name="text">
+             <string>Kamar Terlaris:</string>
+            </property>
+           </widget>
+          </item>
+          <item row="2" column="1">
+           <widget class="QLabel" name="lblMostBookedRoomValue">
+            <property name="styleSheet">
+             <string notr="true">font-weight: bold;</string>
+            </property>
+            <property name="text">
+             <string>-</string>
+            </property>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableReports">
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <column>
+          <property name="text">
+           <string>Tgl. Booking</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>ID Booking</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>ID Bayar</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>User</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Tipe Kamar</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Total</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="layoutReportButtons">
+         <item>
+          <widget class="QPushButton" name="btnExportPDF">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(200,60,60);</string>
+           </property>
+           <property name="text">
+            <string>📄 Export PDF</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacerReportBtn">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabFeedback">
+      <attribute name="title">
+       <string>Kritik dan Saran</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="layoutFeedback">
+       <item>
+        <widget class="QLabel" name="lblFeedbackTitle">
+         <property name="styleSheet">
+          <string notr="true">font-size: 14pt; font-weight: bold; padding: 5px;</string>
+         </property>
+         <property name="text">
+          <string>💬 Kritik dan Saran  User</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableFeedback">
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <column>
+          <property name="text">
+           <string>ID Kritik</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Tanggal</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>User</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Kritik/Saran</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="layoutFeedbackButtons">
+         <item>
+          <widget class="QPushButton" name="btnRefreshFeedback">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(100,100,180);</string>
+           </property>
+           <property name="text">
+            <string>🔄 Refresh Data</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnDeleteFeedback">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(190,60,60);</string>
+           </property>
+           <property name="text">
+            <string>🗑️ Hapus</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacerFeedback">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabRatings">
+      <attribute name="title">
+       <string>Rating Kamar</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="layoutRatings">
+       <item>
+        <widget class="QLabel" name="lblRatingTitle">
+         <property name="styleSheet">
+          <string notr="true">font-size: 14pt; font-weight: bold; padding: 5px;</string>
+         </property>
+         <property name="text">
+          <string>⭐ Rating dan Penilaian Kamar</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableRatings">
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <column>
+          <property name="text">
+           <string>ID Rating</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Nama Kamar</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>User</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Rating</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Review</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Tanggal</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="layoutRatingButtons">
+         <item>
+          <widget class="QPushButton" name="btnRefreshRatings">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(100,100,180);</string>
+           </property>
+           <property name="text">
+            <string>🔄 Refresh Data</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <widget class="QPushButton" name="btnDeleteRating">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(190,60,60);</string>
+           </property>
+           <property name="text">
+            <string>🗑️ Hapus Rating</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacerRating">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabUsers">
+      <attribute name="title">
+       <string>Data User</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="layoutUsers">
+       <item>
+        <widget class="QLabel" name="lblUserTitle">
+         <property name="styleSheet">
+          <string notr="true">font-size: 14pt; font-weight: bold; padding: 5px;</string>
+         </property>
+         <property name="text">
+          <string>👥 Data User</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QTableWidget" name="tableUsers">
+         <property name="editTriggers">
+          <set>QAbstractItemView::NoEditTriggers</set>
+         </property>
+         <property name="selectionBehavior">
+          <enum>QAbstractItemView::SelectRows</enum>
+         </property>
+         <property name="rowCount">
+          <number>0</number>
+         </property>
+         <property name="columnCount">
+          <number>4</number>
+         </property>
+         <column>
+          <property name="text">
+           <string>ID User</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Username</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>Email</string>
+          </property>
+         </column>
+         <column>
+          <property name="text">
+           <string>No. WhatsApp</string>
+          </property>
+         </column>
+        </widget>
+       </item>
+       <item>
+        <layout class="QHBoxLayout" name="layoutButtonsUsers">
+         <item>
+          <widget class="QPushButton" name="btnRefreshUsers">
+           <property name="styleSheet">
+            <string notr="true">background-color: rgb(100,100,180);</string>
+           </property>
+           <property name="text">
+            <string>🔄 Refresh Data</string>
+           </property>
+          </widget>
+         </item>
+         <item>
+          <spacer name="horizontalSpacer">
+           <property name="orientation">
+            <enum>Qt::Horizontal</enum>
+           </property>
+           <property name="sizeHint" stdset="0">
+            <size>
+             <width>40</width>
+             <height>20</height>
+            </size>
+           </property>
+          </spacer>
+         </item>
+        </layout>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QWidget" name="tabLogout">
+      <attribute name="title">
+       <string>Logout</string>
+      </attribute>
+      <layout class="QVBoxLayout" name="layoutLogout">
+       <item>
+        <spacer name="verticalSpacerLogout1">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+       <item>
+        <widget class="QLabel" name="lblLogoutMessage">
+         <property name="styleSheet">
+          <string notr="true">font-size: 16pt; font-weight: bold;</string>
+         </property>
+         <property name="text">
+          <string>Apakah Anda yakin ingin keluar?</string>
+         </property>
+         <property name="alignment">
+          <set>Qt::AlignCenter</set>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QPushButton" name="btnLogout">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgb(190,60,60); padding: 15px;</string>
+         </property>
+         <property name="text">
+          <string>🚪 Logout</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <spacer name="verticalSpacerLogout2">
+         <property name="orientation">
+          <enum>Qt::Vertical</enum>
+         </property>
+         <property name="sizeHint" stdset="0">
+          <size>
+           <width>20</width>
+           <height>40</height>
+          </size>
+         </property>
+        </spacer>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </item>
+   <item>
+    <widget class="QLabel" name="lblFooter">
+     <property name="styleSheet">
+      <string notr="true">padding: 5px; color: rgb(100,100,100);</string>
+     </property>
+     <property name="text">
+      <string>© 2025 Sistem Penginapan | Admin Panel v2.0</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources>
+  <include location="kamar.qrc"/>
+ </resources>
+ <connections/>
+</ui>

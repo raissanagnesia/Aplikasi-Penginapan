@@ -1,0 +1,93 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WelcomeForm</class>
+ <widget class="QWidget" name="WelcomeForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>420</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Selamat Datang</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QWidget {
+        background-color: rgb(255, 244, 185);
+    }
+    QFrame {
+        background-color: rgb(174, 167, 126);
+        border-radius: 15px;
+        padding: 20px;
+    }
+    QLabel {
+        font-size: 10pt;
+        color: rgb(0, 0, 0);
+    }
+    QPushButton {
+        background-color: rgb(255, 244, 185);
+        border-radius: 8px;
+        padding: 8px;
+        font-weight: bold;
+    }
+    QPushButton:hover {
+        background-color: rgb(153, 136, 101);
+        color: white;
+    }
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="mainLayout">
+   <item>
+    <widget class="QLabel" name="lblTitle">
+     <property name="styleSheet">
+      <string notr="true">font-size: 18pt; font-weight: bold; color: rgb(116, 80, 66); margin-top: 20px;</string>
+     </property>
+     <property name="text">
+      <string>🏨 Selamat Datang 🏨</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frameWelcome">
+     <layout class="QVBoxLayout" name="layoutButtons">
+      <property name="spacing">
+       <number>15</number>
+      </property>
+      <item>
+       <widget class="QLabel" name="lblDesc">
+        <property name="text">
+         <string>Silakan masuk untuk melanjutkan:</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnLogin">
+        <property name="text">
+         <string>Login</string>
+        </property>
+       </widget>
+      </item>
+      <item>
+       <widget class="QPushButton" name="btnRegister">
+        <property name="text">
+         <string>Register</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>WidgetDataTransfer</class>
+ <widget class="QWidget" name="WidgetDataTransfer">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>950</width>
+    <height>650</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Data Transfer Admin</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">QWidget { background-color: rgb(231,228,176); }
+QFrame#frameHeader { background-color: white; border-radius: 5px; padding: 10px; border: 1px solid #8b5e3c; }
+QLabel { color:#3e2a16; }
+QTableWidget { background: white; gridline-color: #8b5e3c; }
+QHeaderView::section { background-color: #8b5e3c; color: white; padding: 5px; }</string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="2" column="1">
+    <widget class="QPushButton" name="pushButton">
+     <property name="styleSheet">
+      <string notr="true">background-color: rgb(135, 69, 38);
+color: rgb(255, 255, 255);</string>
+     </property>
+     <property name="text">
+      <string>Kembali</string>
+     </property>
+    </widget>
+   </item>
+   <item row="2" column="0">
+    <spacer name="horizontalSpacer">
+     <property name="orientation">
+      <enum>Qt::Horizontal</enum>
+     </property>
+     <property name="sizeHint" stdset="0">
+      <size>
+       <width>40</width>
+       <height>20</height>
+      </size>
+     </property>
+    </spacer>
+   </item>
+   <item row="1" column="0" colspan="2">
+    <widget class="QTableWidget" name="tableTransferData">
+     <property name="editTriggers">
+      <set>QAbstractItemView::NoEditTriggers</set>
+     </property>
+     <property name="selectionBehavior">
+      <enum>QAbstractItemView::SelectRows</enum>
+     </property>
+     <property name="rowCount">
+      <number>0</number>
+     </property>
+     <property name="columnCount">
+      <number>5</number>
+     </property>
+     <attribute name="horizontalHeaderStretchLastSection">
+      <bool>true</bool>
+     </attribute>
+     <column>
+      <property name="text">
+       <string>ID Bayar</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Nama Pengirim</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Total Bayar</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Status</string>
+      </property>
+     </column>
+     <column>
+      <property name="text">
+       <string>Aksi</string>
+      </property>
+     </column>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="2">
+    <widget class="QFrame" name="frameHeader">
+     <property name="frameShape">
+      <enum>QFrame::StyledPanel</enum>
+     </property>
+     <property name="frameShadow">
+      <enum>QFrame::Raised</enum>
+     </property>
+     <layout class="QGridLayout" name="gridLayoutHeader">
+      <item row="0" column="0">
+       <widget class="QLabel" name="lblTitle">
+        <property name="styleSheet">
+         <string notr="true">font-size: 16pt; font-weight: bold;
+background-color: rgb(255, 255, 255);</string>
+        </property>
+        <property name="text">
+         <string>💰 Konfirmasi Pembayaran</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

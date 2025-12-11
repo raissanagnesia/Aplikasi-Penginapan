@@ -1,0 +1,134 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>TambahKamar</class>
+ <widget class="QWidget" name="TambahKamar">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>602</width>
+    <height>398</height>
+   </rect>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+     QWidget {  background-color: rgb(231,228,176);}
+    QPushButton { background-color:#8b5e3c; color:white; border-radius:4px; padding:6px; }
+    QLabel { color:#3e2a16; font-weight:bold; }
+    QLineEdit, QTextEdit { background:white; border:1px solid #8b5e3c; }
+   </string>
+  </property>
+  <layout class="QGridLayout" name="gridLayout">
+   <item row="3" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Stok:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Harga:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="0">
+    <widget class="QLabel" name="label_2">
+     <property name="text">
+      <string>Gambar:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="1" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Nama Kamar:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="1">
+    <widget class="QLineEdit" name="lineEdit">
+     <property name="styleSheet">
+      <string notr="true">color: rgb(174, 174, 174);</string>
+     </property>
+     <property name="text">
+      <string>Pilih gambar kamar</string>
+     </property>
+    </widget>
+   </item>
+   <item row="4" column="1" colspan="2">
+    <widget class="QLineEdit" name="input_harga"/>
+   </item>
+   <item row="6" column="1">
+    <widget class="QPushButton" name="btn_tambah">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="styleSheet">
+      <string notr="true"> color: rgb(0, 0, 0); background-color: rgb(174,167,126)
+ </string>
+     </property>
+     <property name="text">
+      <string>Tambah</string>
+     </property>
+    </widget>
+   </item>
+   <item row="5" column="2">
+    <widget class="QPushButton" name="pushButton">
+     <property name="font">
+      <font>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>📁 Pilih</string>
+     </property>
+    </widget>
+   </item>
+   <item row="3" column="1" colspan="2">
+    <widget class="QLineEdit" name="input_stok"/>
+   </item>
+   <item row="2" column="1" colspan="2">
+    <widget class="QTextEdit" name="input_deskripsi"/>
+   </item>
+   <item row="1" column="1" colspan="2">
+    <widget class="QLineEdit" name="input_nama"/>
+   </item>
+   <item row="2" column="0">
+    <widget class="QLabel" name="label">
+     <property name="text">
+      <string>Deskripsi:</string>
+     </property>
+    </widget>
+   </item>
+   <item row="0" column="0" colspan="3" alignment="Qt::AlignHCenter">
+    <widget class="QLabel" name="label_3">
+     <property name="font">
+      <font>
+       <pointsize>15</pointsize>
+       <weight>75</weight>
+       <bold>true</bold>
+      </font>
+     </property>
+     <property name="text">
+      <string>Tambah Kamar</string>
+     </property>
+    </widget>
+   </item>
+   <item row="6" column="2">
+    <widget class="QPushButton" name="pushButton_2">
+     <property name="text">
+      <string>Kembali</string>
+     </property>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
