@@ -1,0 +1,5 @@
+<RCC>
+  <qresource prefix="newPrefix">
+    <file>frontend/img/Deluxe room.jpg</file>
+  </qresource>
+</RCC>

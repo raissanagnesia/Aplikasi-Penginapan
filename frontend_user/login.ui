@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>LoginForm</class>
+ <widget class="QWidget" name="LoginForm">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>400</width>
+    <height>419</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Login Penginapan</string>
+  </property>
+  <property name="styleSheet">
+   <string notr="true">
+    QWidget {
+        background-color: rgb(255, 244, 185);
+    }
+    QFrame {
+        background-color: rgb(174, 167, 126);
+        border-radius: 15px;
+        padding: 20px;
+    }
+    QLabel {
+        font-size: 10pt;
+        color: rgb(0, 0, 0);
+    }
+    QLineEdit {
+        background-color: rgb(255, 255, 255);
+        border: 1px solid #b0b0b0;
+        border-radius: 8px;
+        padding: 6px;
+    }
+    QPushButton {
+        background-color: rgb(255, 244, 185);
+        border-radius: 8px;
+        padding: 8px;
+        font-weight: bold;
+    }
+    QPushButton:hover {
+        background-color: rgb(153, 136, 101);
+        color: white;
+    }
+   </string>
+  </property>
+  <layout class="QVBoxLayout" name="verticalLayout" stretch="0,1">
+   <item>
+    <widget class="QLabel" name="lblTitle">
+     <property name="styleSheet">
+      <string notr="true">font-size: 18pt; font-weight: bold; color: rgb(116, 80, 66); margin-top: 20px;</string>
+     </property>
+     <property name="text">
+      <string>🏨 Login Penginapan 🏨</string>
+     </property>
+     <property name="alignment">
+      <set>Qt::AlignCenter</set>
+     </property>
+    </widget>
+   </item>
+   <item>
+    <widget class="QFrame" name="frameLogin">
+     <layout class="QFormLayout" name="formLayout">
+      <item row="1" column="0">
+       <widget class="QLabel" name="lblPassword">
+        <property name="text">
+         <string>Password:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="1">
+       <widget class="QLineEdit" name="txtPassword">
+        <property name="echoMode">
+         <enum>QLineEdit::Password</enum>
+        </property>
+        <property name="placeholderText">
+         <string>Masukkan password...</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0" colspan="2">
+       <widget class="QLabel" name="lblFooter">
+        <property name="styleSheet">
+         <string notr="true">font-size: 9pt; color: rgb(50, 50, 50); margin-top: 10px;</string>
+        </property>
+        <property name="text">
+         <string>Belum punya akun? Daftar sekarang</string>
+        </property>
+        <property name="alignment">
+         <set>Qt::AlignCenter</set>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0" colspan="2">
+       <widget class="QPushButton" name="btnLogin">
+        <property name="text">
+         <string>Login</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="0">
+       <widget class="QLabel" name="lblUsername">
+        <property name="text">
+         <string>Username:</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QLineEdit" name="txtUsername">
+        <property name="placeholderText">
+         <string>Masukkan username...</string>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </item>
+  </layout>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>
